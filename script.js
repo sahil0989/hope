@@ -32,3 +32,35 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
+
+
+function openModal(donationAmount) {
+    const modal = document.getElementById('myModal');
+    const modalText = document.getElementById('modal-text');
+    const qrCode = document.getElementById('qr-code');
+    modalText.textContent = `Scan to donate.`;
+
+    let qrCodeSrc = '';
+    switch (donationAmount) {
+        case '₹10':
+            qrCodeSrc = './img/qr.jpg';
+            break;
+        case '₹50':
+            qrCodeSrc = './img/qr.jpg';
+            break;
+        case '₹100':
+            qrCodeSrc = './img/qr.jpg';
+            break;
+        default:
+            qrCodeSrc = './img/qr.jpg';
+            break;
+    }
+    qrCode.src = qrCodeSrc;
+
+    modal.style.display = 'flex';
+}
+
+document.querySelector('.close').onclick = function () {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}

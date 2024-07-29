@@ -40,7 +40,7 @@
         <div class="w-full h-16"></div>
 
         <div id="menu"
-            class="hidden md:hidden absolute right-0 flex flex-col gap-4 mt-16 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
+            class="hidden md:hidden fixed right-0 flex flex-col gap-4 mt-4 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
             <a href="index.html" class="text-yellow-500">Home</a>
             <a href="about.html">About Hope</a>
             <a href="gallery.html">Gallery</a>
@@ -292,7 +292,7 @@
         </section>
 
         <!-- counting effect  -->
-        <section class="w-full py-8 text-white"
+        <section class="w-full py-8 text-white bg-repeat"
             style="background-image: url('./img/home-animated-counter-bg.jpg');">
             <div
                 class="flex flex-col md:flex-row items-center md:justify-center gap-8 lg:gap-44">
@@ -332,13 +332,15 @@
 
         <!-- footer  -->
         <footer class="w-full bg-black text-white">
-            <div class="flex justify-around items-center gap-8 py-10 px-4 md:px-16">
+            <div
+                class="flex justify-around items-center gap-8 py-10 px-4 md:px-16">
                 <div class="flex flex-col gap-3">
                     <div class="flex items-end gap-1 cursor-pointer">
                         <img src="./img/Hope.jpeg" class="w-8 rounded-lg" />
                         <h2 class="text-5xl font-black">OPE</h2>
                     </div>
-                    <p class="font-semibold text-yellow-500">Give a helping hand to those who
+                    <p class="font-semibold text-yellow-500">Give a helping hand
+                        to those who
                         need it!!</p>
                 </div>
                 <div>
@@ -346,7 +348,8 @@
                 </div>
 
                 <div class="flex flex-col gap-4">
-                    <h2 class="font-semibold text-xl">Contact <span class="text-yellow-500">Us</span></h2>
+                    <h2 class="font-semibold text-xl">Contact <span
+                            class="text-yellow-500">Us</span></h2>
                     <div class="flex gap-4">
                         <a href="https://www.facebook.com/"
                             target="_blank"><i class="fa-brands fa-facebook"
@@ -365,69 +368,23 @@
             </div>
         </footer>
 
+        <script src="/script.js"></script>
         <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const menu = document.getElementById('menu');
-
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-
             
-
-        function openModal(donationAmount) {
-            const modal = document.getElementById('myModal');
-            const modalText = document.getElementById('modal-text');
-            const qrCode = document.getElementById('qr-code');
-            modalText.textContent = `Scan to donate.`;
-        
-            let qrCodeSrc = '';
-            switch (donationAmount) {
-                case '$10':
-                    qrCodeSrc = './qr-code.jpeg';
-                    break;
-                case '$50':
-                    qrCodeSrc = './qr-code.jpeg';
-                    break;
-                case '$100':
-                    qrCodeSrc = './qr-code.jpeg';
-                    break;
-                default:
-                    qrCodeSrc = './qr-code.jpeg';
-                    break;
-            }
-            qrCode.src = qrCodeSrc;
-
-            modal.style.display = 'flex';
-        }
-
-        document.querySelector('.close').onclick = function() {
-            const modal = document.getElementById('myModal');
-                modal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('myModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             const counts = document.querySelectorAll('.count');
-            const speed = 200; // Higher value means slower animation
+            const speed = 200;
 
             counts.forEach(counter => {
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
 
-                    // Adjust the increment for low numbers
                     const inc = target / (speed / (target < 10 ? 10 : 1));
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 30); // Adjust the interval for smoother animation
+                        setTimeout(updateCount, 30);
                     } else {
                         counter.innerText = target;
                     }

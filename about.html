@@ -35,7 +35,17 @@
                     </svg>
                 </button>
             </div>
+
         </nav>
+
+        <div id="menu"
+            class="hidden md:hidden fixed top-2 right-0 flex flex-col gap-4 mt-16 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="text-yellow-500">About Hope</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
         <div class="w-full h-16"></div>
 
         <div>
@@ -73,7 +83,8 @@
                     <h2 class="font-bold text-[45px] lg:text-7xl">We have a
                         strong <span
                             class="text-yellow-500">Mission</span></h2>
-                    <p class="text-black/50 py-6">We currently have projects in 20 locations, delivered by 10 volunteers.
+                    <p class="text-black/50 py-6">We currently have projects in
+                        20 locations, delivered by 10 volunteers.
                         Our main focus is to provide rural communities with a
                         safe and sustainable way of life.</p>
 
@@ -84,35 +95,39 @@
                 </div>
             </div>
         </div>
-        
-        <div class="px-10">
-            <h2 class="text-5xl font-bold my-4">Our <span class="text-yellow-500">Team</span></h2>
 
+        <div class="px-10">
+            <h2 class="text-5xl font-bold my-4">Our <span
+                    class="text-yellow-500">Team</span></h2>
 
             <div class="grid grid-cols-2 md:grid-cols-4">
                 <div class="flex flex-col items-center gap-3">
-                    <img src="./img/team/member1.png" class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
+                    <img src="./img/team/member1.png"
+                        class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
                     <p class="font-semibold">SAHIL</p>
                     <div class="flex">
-                        
+
                     </div>
                 </div>
                 <div class="flex flex-col items-center gap-3">
-                    <img src="./img/team/member2.JPG" class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
+                    <img src="./img/team/member2.JPG"
+                        class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
                     <p class="font-semibold">ARJU SINGH</p>
                     <div class="flex">
 
                     </div>
                 </div>
                 <div class="flex flex-col items-center gap-3">
-                    <img src="./img/team/member3.jpg" class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
+                    <img src="./img/team/member3.jpg"
+                        class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
                     <p class="font-semibold">KOMAL</p>
                     <div class="flex">
 
                     </div>
                 </div>
                 <div class="flex flex-col items-center gap-3">
-                    <img src="./img/team/member4.jpg" class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
+                    <img src="./img/team/member4.jpg"
+                        class="w-24 h-24 rounded-full object-cover border-black border-2 shadow-md" />
                     <p class="font-semibold">SUNITI</p>
                     <div class="flex">
 
@@ -122,13 +137,16 @@
         </div>
 
         <footer class="w-full bg-black text-white mt-10">
-            <div class="flex justify-around items-center gap-8 py-10 px-4 md:px-16">
+            <div
+                class="flex justify-around items-center gap-8 py-10 px-4 md:px-16">
                 <div class="flex flex-col gap-3">
-                    <a href="/index.html" class="flex items-end gap-1 cursor-pointer">
+                    <a href="/index.html"
+                        class="flex items-end gap-1 cursor-pointer">
                         <img src="./img/Hope.jpeg" class="w-8 rounded-lg" />
                         <h2 class="text-5xl font-black">OPE</h2>
                     </a>
-                    <p class="font-semibold text-yellow-500">Give a helping hand to those who
+                    <p class="font-semibold text-yellow-500">Give a helping hand
+                        to those who
                         need it!!</p>
                 </div>
                 <div>
@@ -136,7 +154,8 @@
                 </div>
 
                 <div class="flex flex-col gap-4">
-                    <h2 class="font-semibold text-xl">Contact <span class="text-yellow-500">Us</span></h2>
+                    <h2 class="font-semibold text-xl">Contact <span
+                            class="text-yellow-500">Us</span></h2>
                     <div class="flex gap-4">
                         <a href="https://www.facebook.com/"
                             target="_blank"><i class="fa-brands fa-facebook"
@@ -155,23 +174,7 @@
             </div>
         </footer>
 
-        <div id="menu"
-            class="hidden md:hidden absolute right-0 flex flex-col gap-4 mt-16 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
-            <a href="index.html" class="text-yellow-500">Home</a>
-            <a href="about.html">About Hope</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="#">Blog</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-
-        <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const menu = document.getElementById('menu');
-
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        </script>
+        <script src="./script.js"></script>
 
     </body>
 </html>

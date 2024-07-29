@@ -139,28 +139,14 @@
     </footer>
 
     <div id="menu"
-            class="hidden md:hidden absolute right-0 flex flex-col gap-4 mt-16 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
-            <a href="index.html" class="text-yellow-500">Home</a>
-            <a href="about.html">About Hope</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="#">Blog</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+      class="hidden md:hidden fixed top-2 right-0 flex flex-col gap-4 mt-16 px-12 font-semibold rounded-md pb-4 bg-white shadow-lg">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Hope</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#">Blog</a>
+      <a href="contact.html" class="text-yellow-500">Contact Us</a>
+    </div>
 
-    <script>
-      document
-        .getElementById("feedbackForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert("Thank you for your feedback!");
-        });
-
-        const menuBtn = document.getElementById('menu-btn');
-            const menu = document.getElementById('menu');
-
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
